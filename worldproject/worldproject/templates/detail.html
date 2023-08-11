@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{result.img.url}}" width="300" height="300">
+        </div>
+  
+<div class="col-md-6">
+    <h1>World Details</h1><br><br>
+    <h2>Name: {{ result.name }}</h2>
+    <p>Description: {{ result.desc }}</p>
+    <p>year: {{ result.year}}</p>
+
+    <a class="btn btn-warning" href="{% url 'myworld:update' result.id %}">update</a>
+    <a class="btn btn-primary" href="{% url 'myworld:delete' result.id %}">delete</a>
+{% endblock %}
+    </div>
+</div>
+</div
